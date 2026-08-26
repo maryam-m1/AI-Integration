@@ -1,5 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
+//fs > file system module
 import fs from "fs";
 
 dotenv.config();
