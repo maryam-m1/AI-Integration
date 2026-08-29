@@ -1,6 +1,5 @@
 import express from "express";
-import evaluationRoutes from "./routes/evaluation.routes.js";
-
+import evaluationRoutes from "./routes/evaluation.route.js"; 
 const app = express();
 
 app.use(express.json());
