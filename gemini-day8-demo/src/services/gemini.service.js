@@ -14,9 +14,9 @@ export const evaluateStructuredService = async (question, studentAnswer) => {
     model: "gemini-3.6-flash",
     contents: prompt,
     config: {
-      // Yeh ensure karega ke output sirf JSON ho
+      // This will ensure the output is only JSON
       responseMimeType: "application/json",
-      // Yeh batayega ke JSON ka exact structure kya hona chahiye
+      // will tell > what will be the json structure of the response
       responseSchema: {
         type: Type.OBJECT,
         properties: {
@@ -38,6 +38,6 @@ export const evaluateStructuredService = async (question, studentAnswer) => {
     },
   });
 
-  // response.text ek JSON string hogi, hum usay parse karke object bana lenge
+  // response.text will be a json string, we'll make it object after parsing
   return JSON.parse(response.text);
 };

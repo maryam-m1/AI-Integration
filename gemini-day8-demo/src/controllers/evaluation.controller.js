@@ -12,7 +12,7 @@ export const evaluateStructuredController = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      data: structuredResult, // Ab yeh aik proper JSON object hoga
+      data: structuredResult, //now it will be a json object
     });
 
   } catch (error) {
