@@ -1,0 +1,15 @@
+$kind: http-request
+name: evaluation_API
+description: ""
+url: http://localhost:3000/api/evaluate
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"question\": \"What is encapsulation in Object-Oriented Programming?\",\r
+
+    \  \"studentAnswer\": \"Encapsulation is bundling data and methods that operate on that data within a single unit, like a class, and restricting direct access.\"\r
+
+    }"
+order: 1787996904496
