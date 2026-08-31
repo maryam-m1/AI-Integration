@@ -1,15 +1,35 @@
 $kind: http-request
 name: evaluate-structured
 description: ""
-url: http://localhost:3000/api/evaluate-structured
+url: http://localhost:3000/api/evaluate-batch
 method: POST
 body:
   type: json
   content: "{\r
 
-    \  \"question\": \"What is encapsulation in Object-Oriented Programming?\",\r
+    \  \"answersList\": [\r
 
-    \  \"studentAnswer\": \"Encapsulation is bundling data and methods that operate on that data within a single unit and restricting direct access.\"\r
+    \    {\r
+
+    \      \"questionId\": \"Q1\",\r
+
+    \      \"question\": \"What is polymorphism in OOP?\",\r
+
+    \      \"studentAnswer\": \"Polymorphism allows objects of different classes to be treated through the same interface.\"\r
+
+    \    },\r
+
+    \    {\r
+
+    \      \"questionId\": \"Q2\",\r
+
+    \      \"question\": \"What is inheritance?\",\r
+
+    \      \"studentAnswer\": \"Inheritance is copying code blindly.\"\r
+
+    \    }\r
+
+    \  ]\r
 
     }"
 order: 2766434360971623
