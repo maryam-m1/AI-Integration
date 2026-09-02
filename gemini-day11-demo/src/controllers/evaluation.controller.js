@@ -37,12 +37,13 @@ export const evaluateImageController = async (req, res) => {
   }
 };
 
-// Naya controller function: Saari history dekhne ke liye
+// History get karne ke liye controller
 export const getEvaluationHistory = async (req, res) => {
   try {
     const history = await Evaluation.find().sort({ createdAt: -1 });
     res.status(200).json({ success: true, count: history.length, data: history });
   } catch (error) {
+    console.error("Error fetching history:", error);
     res.status(500).json({ error: "Failed to fetch history" });
   }
 };
