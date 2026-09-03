@@ -7,7 +7,8 @@ const router = express.Router();
 // Multer memory storage configuration
 const upload = multer({ storage: multer.memoryStorage() });
 
-// POST route for image evaluation & saving to DB
+// POST 
+// route to evaluate an image
 router.post("/evaluate-image", upload.single("image"), evaluateImageController);
 
 // GET route to fetch all past evaluations history from DB
