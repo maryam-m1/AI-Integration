@@ -11,7 +11,8 @@ const upload = multer({ storage: multer.memoryStorage() });
 // route to evaluate an image
 router.post("/evaluate-image", upload.single("image"), evaluateImageController);
 
-// GET route to fetch all past evaluations history from DB
+// GET 
+//  route to fetch all past evaluations history from DB
 router.get("/history", getEvaluationHistory);
 
 export default router;
