@@ -4,7 +4,7 @@ import { evaluateImageController, getEvaluationHistory } from "../controllers/ev
 
 const router = express.Router();
 
-// Multer memory storage configuration
+// for image conversion > Multer memory storage configuration
 const upload = multer({ storage: multer.memoryStorage() });
 
 // POST 
